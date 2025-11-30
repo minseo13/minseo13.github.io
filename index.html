@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이민서 | iOS Developer</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div id="progress-bar"></div>
 
     <nav>
         <div class="container nav-container">
@@ -21,54 +26,53 @@
         </div>
     </nav>
 
-    <header>
-    <div class="container header-content">
-        <span class="badge">IOS Developer</span>
-        
-        <h1>
-            IOS 앱 개발자<br>
-            <span class="highlight">이민서</span>입니다.
-        </h1>
-        
-        <p class="description">
-            빈틈없는 논리와 구조적 사고로<br>
-            사용자에게 가장 편안한 앱 경험을 설계합니다.
-        </p>
-        
-        <div class="header-buttons">
-            <a href="#projects" class="btn primary">프로젝트 보기</a>
-            <a href="resume.pdf" download class="btn secondary">이력서 저장</a> 
+    <header class="hidden">
+        <div class="container header-content">
+            <span class="badge">Portfolio</span>
+            
+            <h1>
+                iOS 앱 개발자<br>
+                <span class="highlight">이민서</span>입니다.
+            </h1>
+            
+            <p class="description">
+                </p>
+            
+            <div class="header-buttons" style="margin-top: 40px;">
+                <a href="#projects" class="btn primary">프로젝트 보기</a>
+                <a href="LeeMinseo.pdf" download class="btn secondary">이력서 저장</a>
+                <button onclick="printResume()" class="btn secondary">이력서 출력</button>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-    <section id="about">
+    <section id="about" class="hidden">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-grid">
                 <div class="profile-card">
                     <div class="profile-img">
-                        <div class="placeholder-face">사진</div> 
+                        <img src="minseo.jpg" alt="이민서 프로필 사진">
                     </div>
                     <div class="profile-info">
                         <h3>이민서 <span class="en-name">Lee Minseo</span></h3>
                         <p>🎂 2004. 07. 15</p>
                         <p>🏠 인천광역시 부평구</p>
-                        <p>📧 baey3104@gmail.com</p>
-                        </div>
+                        <p>📧 <a href="mailto:baey3104@gmail.com" class="email-link">baey3104@gmail.com</a></p>
+                    </div>
                 </div>
 
                 <div class="intro-text">
-                    <h3>"꼼꼼함과 구조적 사고를 가진 개발자"</h3>
+                    <h3>"기술을 넘어, 사용자의 '경험'을 코딩합니다"</h3>
                     <p>
-                        저는 세부적인 디테일가지 신경 쓰는 꼼꼼함과 지속적인 기술 학습 습관을 강점으로 가지고 있습니다.
-                        어떤 일을 시작하든 <strong>흐름과 구조를 먼저 파악</strong>하고, 그 안에서 놓치기 쉬운 요소나 논리적 오류를 점검하는 습관이 몸에 배어 있습니다.
+                        사용자가 느끼는 <strong>편안함은 보이지 않는 코드의 디테일에서 시작된다</strong>고 믿습니다. 어떤 일을 시작하든 흐름과 구조를 먼저 파악하고, 놓치기 쉬운 논리적 오류를 점검하는 습관은
+                        <strong>앱의 안정성을 높이는 기반</strong>이 되었습니다.
                     </p>
                     <p>
                         개발 공부를 하면서도 문법 하나, 동작 원리 하나를 단순히 외우기보다는 왜 그렇게 작동하는지, 실제로 어떻게 구현되는지를 확인하며 학습해왔습니다.
                     </p>
                     <p>
-                        WWDC 최신 정보, SwiftUI의 최신 기능, Firebase의 구조적 업데이트 등을 꾸준히 따라가며, 
+                        WWDC 최신 정보, SwiftUI의 기능 업데이트 등을 꾸준히 따라가며, 
                         변화하는 iOS 생태계에 유연하게 적응할 수 있는 개발자로 성장하고 있습니다.
                     </p>
                 </div>
@@ -76,33 +80,34 @@
         </div>
     </section>
 
-    <section id="specs" class="bg-light">
+    <section id="specs" class="bg-light hidden">
         <div class="container">
             <h2 class="section-title">Resume & Skills</h2>
             
             <div class="resume-grid">
                 <div class="resume-item">
-                    <h3>🎓 Education</h3>
+                    <h3>🎓 학력</h3>
                     <ul class="timeline">
                         <li>
                             <span class="time">2023.03 - 2026.02 (졸업예정)</span>
                             <strong>인하공업전문대학</strong>
-                            <p>컴퓨터정보공학과 | 3학년 (전공심화)</p>
+                            <p>컴퓨터정보공학과 | 3학년</p>
                         </li>
                         <li>
                             <span class="time">2020.03 - 2023.02</span>
                             <strong>상동 고등학교</strong>
-                            <p>중국어 중점반 (일반고 특성화) 졸업</p>
+                            <p>중국어 중점반 (일반고 언어 특성반) 졸업</p>
                         </li>
                     </ul>
                 </div>
 
                 <div class="resume-item">
-                    <h3>📜 Certifications</h3>
+                    <h3>📜 자격증 및 언어</h3>
                     <ul class="list-check">
                         <li><strong>GTQ 1급</strong> (그래픽기술자격)</li>
                         <li><strong>ITQ OA Master</strong> (엑셀, 한글, PPT A등급)</li>
                         <li><strong>운전면허 1종 보통</strong></li>
+                        <li><strong>영어, 중국어 가능</strong></li>
                     </ul>
                 </div>
             </div>
@@ -117,6 +122,7 @@
                             <span class="tag swiftui">SwiftUI</span>
                             <span class="tag">UIKit</span>
                             <span class="tag">MapKit</span>
+                            <span class="tag">MVVM</span>
                         </div>
                     </div>
                     <div class="skill-category">
@@ -125,8 +131,13 @@
                             <span class="tag">Firebase</span>
                             <span class="tag">Git/GitHub</span>
                             <span class="tag">Python</span>
+                            <span class="tag">Go</span>
+                            <span class="tag">C#</span>
                             <span class="tag">Java/JDBC</span>
                             <span class="tag">Photoshop</span>
+                            <span class="tag">PowerPoint</span>
+                            <span class="tag">Excel</span>
+                            <span class="tag">Word</span>
                         </div>
                     </div>
                 </div>
@@ -135,49 +146,68 @@
         </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="hidden">
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 
                 <div class="project-card">
-                    <div class="card-image">
-                        <div class="placeholder-img" style="background: linear-gradient(135deg, #007AFF, #5AC8FA);">
-                            <span>산책 앱 실행화면</span>
-                        </div>
+                    <div class="card-images two-images mobile-app">
+                        <img src="walk1.png" alt="산책 통계 화면">
+                        <img src="walk2.png" alt="산책 지도 경로 화면">
                     </div>
                     <div class="card-content">
                         <div class="card-meta">2025.03 - 2025.06 | 개인 프로젝트 (iOS)</div>
-                        <h3>산책 (Walking App)</h3>
+                        <h3>산책 앱 동네한바퀴 (Walking App)</h3>
                         <p class="project-desc">
-                            SwiftUI 기반의 위치 추적 및 헬스케어 앱입니다. 
-                            실시간 경로 그리기와 자체 추천 코스 알고리즘을 구현하였으며, 
-                            Firebase를 활용해 데이터를 클라우드에 동기화합니다.
+                            내 위치를 실시간으로 추적하여 경로를 지도에 그리고, 걸음 수와 칼로리를 계산해주는 헬스케어 앱입니다. 
+                            내 위치에 따라 주변 산책 코스를 추천해줍니다.
+                            MapKit을 활용한 경로 시각화와 Firebase 데이터 동기화를 중점적으로 구현했습니다.
                         </p>
                         <ul class="tech-stack">
                             <li>SwiftUI</li>
-                            <li>CoreLocation</li>
+                            <li>MapKit</li>
                             <li>Firebase</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="card-image">
-                        <div class="placeholder-img" style="background: linear-gradient(135deg, #5856D6, #AF52DE);">
-                            <span>영화 예매 화면</span>
-                        </div>
+                    <div class="card-images two-images mobile-app">
+                        <img src="emotion2.png" alt="감정 캘린더 화면">
+                        <img src="emotion1.png" alt="감정 기록 팝업 화면">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">2025.06 | 개인 프로젝트 (Android)</div>
+                        <h3>감정 일기장 앱 (Mood Diary)</h3>
+                        <p class="project-desc">
+                            매일의 기분을 아이콘으로 기록하고 캘린더에서 모아볼 수 있는 감정 관리 앱입니다.
+                            Java 언어를 기반으로 개발하였으며, Firebase Realtime Database를 연동하여 데이터를 실시간으로 저장하고 불러옵니다.
+                        </p>
+                        <ul class="tech-stack">
+                            <li>Java</li>
+                            <li>Firebase</li>
+                            <li>Android</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-images two-images web-app">
+                        <img src="movie1.png" alt="영화 메인 화면">
+                        <img src="movie2.png" alt="좌석 선택 화면">
                     </div>
                     <div class="card-content">
                         <div class="card-meta">2022.09 - 2022.10 | 팀 프로젝트 (Web)</div>
                         <h3>영화 예매 웹사이트</h3>
                         <p class="project-desc">
-                            Java JDBC와 Oracle DB를 연동한 영화 예매 풀스택 프로젝트입니다.
-                            JavaScript로 좌석 선택 로직을 구현하고, 결제 API를 연동하여 실제 예매 프로세스를 구축했습니다.
+                            실시간 좌석 선택과 예매가 가능한 웹 플랫폼입니다. 
+                            JavaScript로 직관적인 좌석 선택 UI를 직접 구현하고, 오라클 DB와 연동하여 예매 정보를 관리합니다.
+                            카카오페이를 통한 간편 결제 시스템이 구축되어 있습니다.
                         </p>
                         <ul class="tech-stack">
-                            <li>Java</li>
-                            <li>JDBC/Oracle</li>
+                            <li>Java / JDBC</li>
+                            <li>Oracle DB</li>
                             <li>JavaScript</li>
                         </ul>
                     </div>
@@ -187,7 +217,7 @@
         </div>
     </section>
 
-    <footer id="contact">
+    <footer id="contact" class="hidden">
         <div class="container">
             <h2>Contact</h2>
             <div class="contact-info">
@@ -197,5 +227,66 @@
         </div>
     </footer>
 
+    <script>
+        // 이력서 인쇄 기능
+        function printResume() {
+            const fileUrl = 'LeeMinseo.pdf'; 
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none'; 
+            iframe.src = fileUrl;          
+            document.body.appendChild(iframe);
+            iframe.onload = function() {
+                setTimeout(function() {
+                    iframe.contentWindow.focus();
+                    iframe.contentWindow.print();
+                }, 500); 
+            };
+        }
+
+        // 스크롤 애니메이션
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show'); 
+                } 
+            });
+        });
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        // 네비게이션 스크롤 스파이 & 스크롤 진행바 -> 이거 더 찾아보기 ㅇㅇ
+        const sections = document.querySelectorAll('header, section, footer');
+        const navLi = document.querySelectorAll('nav ul li a');
+        const progressBar = document.getElementById('progress-bar');
+
+        window.addEventListener('scroll', () => {
+            // 스크롤 스파이 로직 -> 구현 성공
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
+                current = 'contact';
+            }
+
+            navLi.forEach(a => {
+                a.classList.remove('active');
+                if (current && a.getAttribute('href').includes(current)) {
+                     a.classList.add('active');
+                }
+            });
+
+            // 스크롤 진행바 로직 -> 굿
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (scrollTop / scrollHeight) * 100;
+            progressBar.style.width = scrolled + "%";
+        });
+    </script>
 </body>
 </html>
